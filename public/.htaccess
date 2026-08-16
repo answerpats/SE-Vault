@@ -1,0 +1,32 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Don't rewrite real files or directories (assets, images, etc.)
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Everything else -> index.html (React Router handles the path, renders Home at /)
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# Caching policy
+<IfModule mod_headers.c>
+  # Hashed build assets (e.g. index-Jui5KdDK.js) never change content for a given
+  # name, so cache them hard for a year.
+  <FilesMatch "\.(js|css|woff2?|ttf|eot)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # Images keep the same filename (e.g. back.png) when replaced, so force the
+  # browser to revalidate every time. This makes a swapped image show instantly.
+  <FilesMatch "\.(png|jpe?g|gif|svg|webp|ico|avif)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+
+  # Never cache the HTML shell.
+  <FilesMatch "\.html?$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
