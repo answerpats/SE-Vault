@@ -25,7 +25,7 @@ export default function Navbar() {
   const links = [
     { label: 'Home', href: '/' },
     { label: 'Services', href: '/services' },
-    { label: 'Insights', href: '/insights' },
+    { label: 'News', href: '/news' },
     { label: 'Gallery', href: '/gallery' },
     { label: 'Value Vault', href: '/vault' },
     { label: 'About', href: '/about' },
@@ -36,9 +36,7 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 ${topBarOffset} left-0 right-0 z-[100] transition-all duration-500 ${
-        scrolled || location.pathname !== '/'
-          ? 'glass-panel shadow-lg'
-          : 'bg-[#0d0b08]/80 backdrop-blur-md lg:bg-transparent'
+        scrolled || location.pathname !== '/' ? 'glass-panel shadow-lg' : 'bg-transparent'
       }`}
     >
       <div className="container-section">
@@ -80,22 +78,21 @@ export default function Navbar() {
           </div>
 
           <button
-            className="lg:hidden flex items-center justify-center w-11 h-11 rounded-xl bg-white/10 hover:bg-white/20 active:scale-95 border border-white/20 text-white transition-all shadow-md focus:outline-none focus:ring-2 focus:ring-accent-orange/50 cursor-pointer"
+            className="lg:hidden text-text-primary p-2 -mr-2 rounded-lg hover:bg-white/5 transition-colors"
             onClick={() => setOpen(!open)}
-            aria-label="Toggle navigation menu"
-            aria-expanded={open}
+            aria-label="Toggle menu"
           >
-            {open ? <X size={24} className="text-accent-orange" /> : <Menu size={24} className="text-white" />}
+            {open ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         <div
           className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-            open ? 'max-h-[550px] opacity-100 pb-5' : 'max-h-0 opacity-0'
+            open ? 'max-h-[500px] opacity-100 pb-5' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className="-mx-5 px-5 pt-3 pb-2 space-y-1 bg-[#0a0a0c]/98 backdrop-blur-2xl border-t border-white/10 rounded-b-2xl shadow-2xl">
+          <div className="border-t border-white/10 pt-2 space-y-0.5">
             {links.map((link) => (
               <NavLink
                 key={link.label}
@@ -104,7 +101,7 @@ export default function Navbar() {
                 onClick={() => setOpen(false)}
                 className={({ isActive }) =>
                   `block py-3 px-4 rounded-xl text-[15px] font-medium transition-colors ${
-                    isActive ? 'text-white bg-white/10 font-semibold' : 'text-text-muted hover:text-white active:bg-white/5'
+                    isActive ? 'text-white bg-white/8' : 'text-text-muted active:bg-white/5'
                   }`
                 }
               >
@@ -115,7 +112,7 @@ export default function Navbar() {
               <Link
                 to="/membership"
                 onClick={() => setOpen(false)}
-                className="block bg-accent-orange text-white text-center py-3 rounded-xl text-[15px] font-bold shadow-[0_0_20px_rgba(255,123,0,0.3)] active:opacity-90"
+                className="block bg-accent-orange text-white text-center py-3 rounded-xl text-[15px] font-bold"
               >
                 Join Our Family
               </Link>

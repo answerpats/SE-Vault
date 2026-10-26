@@ -26,7 +26,8 @@ export default function AboutUs() {
             Who We Are
           </h2>
           <p className="text-text-muted text-sm sm:text-base leading-relaxed">
-            SE Vault Uganda was established by Ssekaayi Elvis to provide strategic advisory, research and enterprise development support that helps enterprises navigate, embrace innovation, seize opportunities and achieve sustainable growth.
+            We believe that every business deserves reliable, accessible, and professional support to thrive.
+            Founded in Uganda to address the evolving needs of businesses in administration, compliance, finance, and digital transformation.
           </p>
         </div>
 
