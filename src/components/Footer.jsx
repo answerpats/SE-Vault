@@ -3,7 +3,7 @@ import { Phone, Mail, ExternalLink, MessageCircle } from 'lucide-react';
 
 const quickLinks = [
   { label: 'Services', to: '/services' },
-  { label: 'News', to: '/news' },
+  { label: 'Insights', to: '/insights' },
   { label: 'Gallery', to: '/gallery' },
   { label: 'Value Vault', to: '/vault' },
   { label: 'FAQ', to: '/faq' },
@@ -51,10 +51,10 @@ export default function Footer() {
           <div className="hidden sm:block">
             <h4 className="text-[11px] sm:text-xs font-bold text-white mb-4 uppercase tracking-[0.2em]">Services</h4>
             <ul className="space-y-2.5 text-text-muted text-[13px] sm:text-sm">
-              <li>Small Business Support</li>
-              <li>Portfolio Management</li>
-              <li>E-Commerce Solutions</li>
-              <li>Business Systems</li>
+              <li>Enterprise Development</li>
+              <li>Capital Mobilization</li>
+              <li>Feasibility Studies</li>
+              <li>Partnership Development</li>
             </ul>
           </div>
 

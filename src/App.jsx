@@ -24,6 +24,7 @@ function App() {
           <Route path="contact" element={<ContactPage />} />
           <Route path="membership" element={<MembershipSignupPage />} />
           <Route path="news" element={<NewsPage />} />
+          <Route path="insights" element={<NewsPage />} />
           <Route path="gallery" element={<GalleryPage />} />
           <Route path="faq" element={<FAQPage />} />
         </Route>

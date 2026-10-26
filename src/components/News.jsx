@@ -57,10 +57,10 @@ export default function News() {
       <div className="container-section">
         <div className="text-center mb-14 sm:mb-20">
           <span className="text-accent-orange text-[11px] sm:text-xs font-bold tracking-[0.2em] uppercase">
-            News & Updates
+            Insights &amp; Updates
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mt-3 tracking-tight">
-            Latest <span className="text-gradient">News</span>
+            Latest <span className="text-gradient">Insights</span>
           </h2>
           <p className="text-text-muted text-sm sm:text-base mt-4 max-w-lg mx-auto leading-relaxed">
             Stay updated with the latest happenings and insights from S.E. & Associates.
