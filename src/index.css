@@ -40,22 +40,10 @@
     box-sizing: border-box;
   }
 
-  html,
-  body {
-    overflow-x: hidden !important;
-    width: 100%;
-    max-width: 100vw;
-    position: relative;
+  html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-
-  #root {
-    overflow-x: hidden !important;
-    width: 100%;
-    max-width: 100vw;
-    position: relative;
   }
 
   body {
@@ -67,6 +55,7 @@
     color: var(--color-text-primary);
     font-family: var(--font-body);
     line-height: 1.6;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -87,15 +76,8 @@
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-@media (min-width: 480px) {
-  .container-section {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 @media (min-width: 640px) {

@@ -9,10 +9,10 @@ export default function MainLayout() {
   const hasAnnouncement = settings.announcementEnabled && settings.announcementText;
 
   return (
-    <div className="min-h-screen bg-bg-primary flex flex-col w-full max-w-full overflow-x-hidden">
+    <div className="min-h-screen bg-bg-primary flex flex-col">
       <TopBar />
       <Navbar />
-      <main className={`flex-grow w-full max-w-full overflow-x-hidden pt-28 ${hasAnnouncement ? 'sm:pt-[180px] lg:pt-[196px]' : 'sm:pt-[148px] lg:pt-[164px]'}`}>
+      <main className={`flex-grow pt-28 ${hasAnnouncement ? 'sm:pt-[180px] lg:pt-[196px]' : 'sm:pt-[148px] lg:pt-[164px]'}`}>
         <Outlet />
       </main>
       <Footer />

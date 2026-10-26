@@ -23,10 +23,10 @@ export default function HomeNewsPreview() {
   if (updates.length === 0) return null;
 
   return (
-    <section className="py-20 sm:py-28 relative overflow-hidden">
+    <section className="py-20 sm:py-28">
       <div className="container-section">
         <div className="text-center mb-14 sm:mb-16">
-          <Link to="/insights" className="inline-block group">
+          <Link to="/news" className="inline-block group">
             <span className="text-accent-orange text-[11px] sm:text-xs font-bold tracking-[0.2em] uppercase">
               Latest Updates
             </span>
@@ -40,7 +40,7 @@ export default function HomeNewsPreview() {
           {updates.map((u) => (
             <Link
               key={u.id}
-              to="/insights"
+              to="/news"
               className="group glass-card rounded-2xl overflow-hidden flex flex-col hover:border-accent-orange/30 transition-colors"
             >
               {u.image_url && (
@@ -63,8 +63,8 @@ export default function HomeNewsPreview() {
         </div>
 
         <div className="text-center mt-10">
-          <Link to="/insights" className="inline-flex items-center gap-2 text-accent-orange text-sm font-semibold hover:gap-3 transition-all">
-            View All Insights <ArrowRight size={16} />
+          <Link to="/news" className="inline-flex items-center gap-2 text-accent-orange text-sm font-semibold hover:gap-3 transition-all">
+            View All News <ArrowRight size={16} />
           </Link>
         </div>
       </div>

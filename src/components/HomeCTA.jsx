@@ -3,7 +3,7 @@ import { ArrowRight, Sparkles } from 'lucide-react';
 
 export default function HomeCTA() {
   return (
-    <section className="py-20 sm:py-28 relative overflow-hidden">
+    <section className="py-20 sm:py-28">
       <div className="container-section">
         <div className="relative glass-panel rounded-2xl sm:rounded-3xl p-8 sm:p-12 lg:p-16 text-center overflow-hidden glow-orange">
           <div className="absolute top-0 left-0 w-40 h-40 bg-accent-orange/10 blur-[80px] -translate-y-1/2 -translate-x-1/2 pointer-events-none" />

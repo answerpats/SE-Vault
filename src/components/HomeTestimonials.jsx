@@ -28,7 +28,7 @@ export default function HomeTestimonials() {
   const active = testimonials.length > 0 ? testimonials : defaultTestimonials;
 
   return (
-    <section className="py-20 sm:py-28 relative overflow-hidden">
+    <section className="py-20 sm:py-28 relative">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent-orange/[0.03] rounded-full blur-[120px] pointer-events-none" />
 
       <div className="container-section relative z-10">

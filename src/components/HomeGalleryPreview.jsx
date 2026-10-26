@@ -23,7 +23,7 @@ export default function HomeGalleryPreview() {
   if (items.length === 0) return null;
 
   return (
-    <section className="py-20 sm:py-28 relative overflow-hidden">
+    <section className="py-20 sm:py-28">
       <div className="container-section">
         <div className="text-center mb-14 sm:mb-16">
           <Link to="/gallery" className="inline-block group">
